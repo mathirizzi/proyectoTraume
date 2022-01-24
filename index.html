@@ -1,51 +1,143 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
-
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traume</title>
-</head>
-
-<!--NAVBAR-->
-
-
-<!--CARROUSEL-->
+  </head>
+  <body>
 
 
-<!--OFERTAS-->
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">Traume</a>
 
 
-<!--CONTACTO-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
 
-<!--FOOTER-->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tienda Online</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
+    <!--CARROUSEL-->
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imgs/banner01.jpg" alt="Los Angeles" class="d-block w-100 img-fluid">
+    </div>
+    <div class="carousel-item">
+      <img src="imgs/banner02.jpg" alt="Chicago" class="d-block w-100 img-fluid">
+    </div>
+    <div class="carousel-item">
+      <img src="imgs/banner03.jpg" alt="New York" class="d-block w-100 img-fluid">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+    <!--OFERTAS-->
 
 
-<body>
+<h2 class="text-center">Nuevos productos</h2>
+<h3 class="text-center">Las mejores ofertas</h3>
 
 
+    <div class="container-fluid d-inline-flex justify-content-center">
+
+<div class="row justify-content-between">
+
+      <div class="border col-5 col-lg-2">
+        <div>
+        <img class="img-fluid w-100" src="imgs/oferta01.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="border col-5 col-lg-2">
+        <div>
+        <img class="img-fluid w-100" src="imgs/oferta02.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="border col-5 col-lg-2">
+        <div>
+        <img class="img-fluid w-100" src="imgs/oferta03.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="border col-5 col-lg-2">
+        <div>
+        <img class="img-fluid w-100" src="imgs/oferta04.jpg" alt="">
+        </div>
+      </div>
+
+</div>
+
+    </div>
 
 
-
-
-
-
+    <!--CONTACTO-->
+<div class="container-fluid d-flex justify-content-center">
+    <form class="border w-50" action="action_page.php">
+      <div class="container-fluid">
+        <h2 class="text-center">Recibi nuestras novedades!</h2>
+      </div>
     
-</body>
-
-
-
-
-
-
-
-
+      <div class="container justify-content-center d-flex" style="background-color:white">
+        <input type="text" placeholder="Nombre" name="name" required>
+        <input type="text" placeholder="Correo electronico" name="mail" required>
+      </div>
+    
+      <div class="container justify-content-center d-flex">
+        <input type="submit" value="Suscribite">
+      </div>
+    </form>
+  </div>
+    <!--FOOTER-->
+    
+  
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+    
+  </body>
 </html>
