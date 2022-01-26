@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <!--CSS Propio-->
+    <link rel="stylesheet" href="css/estilos.css">
 
     <title>Traume</title>
   </head>
@@ -118,23 +120,39 @@
 
 
     <!--CONTACTO-->
-<div class="container-fluid d-flex justify-content-center">
-    <form class="border w-50" action="action_page.php">
-      <div class="container-fluid">
-        <h2 class="text-center">Recibi nuestras novedades!</h2>
-      </div>
+<div class="container border col-6">
+  <div class="row">
+    <form class="text-center" action="/action_page.php">
+      <label class="col-6 text-start" for="name">Nombre</label>
+      <input class="col-6" type="text" id="name" name="name">
     
-      <div class="container justify-content-center d-flex" style="background-color:white">
-        <input type="text" placeholder="Nombre" name="name" required>
-        <input type="text" placeholder="Correo electronico" name="mail" required>
-      </div>
+      <label class="col-6 text-start" for="email">Correo electronico</label>
+      <input class="col-6" type="text" id="email" name="email">
     
-      <div class="container justify-content-center d-flex">
-        <input type="submit" value="Suscribite">
-      </div>
+      <label class="col-6 text-start" for="localidad">Localidad</label>
+      <select class="col-6" id="localidad" name="localidad">
+        <option value="tresDeFebrero">Tres de Febrero</option>
+        <option value="moron">Moron</option>
+        <option value="ituzaingo">Ituzaingo</option>
+      </select>
     </form>
   </div>
+    <div class="row d-flex justify-content-center">
+      <input class="col-4 btn btn-primary mt-1" type="submit" value="Suscribite">
+    </div>
+    </form>
+  
+  </div>
     <!--FOOTER-->
+
+    <div class="container-fluid p-0">
+      <div class="col-3 border bg-secondary">FOOTER</div>
+
+      <div class="col-3 border bg-secondary">FOOTER</div>
+
+      <div class="col-3 border bg-secondary">FOOTER</div>
+
+    </div>
     
   
     <script src="bootstrap/js/bootstrap.min.js" ></script>
