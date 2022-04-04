@@ -1,0 +1,42 @@
+[
+
+  {
+    "id": 1,
+    "nombre": "Triangulito",
+    "talle": "4",
+    "precio": 1500,
+    "stock": 20,
+    "img": "oferta01.jpg"
+  },
+
+  
+  {
+    "id": 2,
+    "nombre": "Marilyn",
+    "talle": "2",
+    "precio": 900,
+    "stock": 10,
+    "img": "oferta02.jpg"
+  },
+
+  
+  {
+    "id": 3,
+    "nombre": "Enteriza",
+    "talle": "5",
+    "precio": 2000,
+    "stock": 7,
+    "img": "oferta03.jpg"
+  },
+
+  
+  {
+    "id": 4,
+    "nombre": "Bandeau",
+    "talle": "4",
+    "precio": 1750,
+    "stock": 13,
+    "img": "oferta04.jpg"
+  }
+
+]

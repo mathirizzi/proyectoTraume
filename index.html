@@ -20,7 +20,7 @@
 
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="#">Traume</a>
+        <a id="logo" class="navbar-brand" href="#">Traume</a>
 
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -44,6 +44,29 @@
       </div>
     </nav>
 
+
+    <form id="formRegistrar" class="m-3 p-1 border border-dark" action="action_page.php" method="post">
+    
+      <div class="container">
+        <label for="usuario"><b>Usuario</b></label>
+        <input id="inputUsuario" type="text" placeholder="Ingresar Usuario" name="usuario" required>
+    
+        <label for="correo"><b>Correo Electronico</b></label>
+        <input id="inputCorreo" type="text" placeholder="Ingresar Correo" name="correo" required>
+
+        <label for="contraseña"><b>Contraseña</b></label>
+        <input id="inputContraseña" type="password" placeholder="Ingresar Contraseña" name="contraseña" required>
+    
+        <button id="inputRegistrate" type="submit">Registrarse</button>
+      </div>
+    
+      
+    </form>
+
+    <div id="usuariosRegistrados" class="container">
+      <button id="botonVerUsuarios" class="btn btn-secondary">Ver Usuarios Registrados</button>
+
+    </div>
 
     <!--CARROUSEL-->
 
@@ -85,42 +108,14 @@
 <h2 class="text-center">Nuevos productos</h2>
 <h3 class="text-center">Las mejores ofertas</h3>
 
+<div id="listaDeProductos"></div>
 
-    <div class="container-fluid d-inline-flex justify-content-center">
 
-<div class="row justify-content-between">
 
-      <div class="border col-5 col-lg-2">
-        <div>
-        <img class="img-fluid w-100" src="imgs/oferta01.jpg" alt="">
-        </div>
-      </div>
-
-      <div class="border col-5 col-lg-2">
-        <div>
-        <img class="img-fluid w-100" src="imgs/oferta02.jpg" alt="">
-        </div>
-      </div>
-
-      <div class="border col-5 col-lg-2">
-        <div>
-        <img class="img-fluid w-100" src="imgs/oferta03.jpg" alt="">
-        </div>
-      </div>
-
-      <div class="border col-5 col-lg-2">
-        <div>
-        <img class="img-fluid w-100" src="imgs/oferta04.jpg" alt="">
-        </div>
-      </div>
-
-</div>
-
-    </div>
 
 
     <!--CONTACTO-->
-<div class="container border col-6">
+<div id="formContacto" class="container border col-6">
   <div class="row">
     <form class="text-center" action="/action_page.php">
       <label class="col-6 text-start" for="name">Nombre</label>
@@ -138,7 +133,7 @@
     </form>
   </div>
     <div class="row d-flex justify-content-center">
-      <input class="col-4 btn btn-primary mt-1" type="submit" value="Suscribite">
+      <input id="inputSuscribite" class="col-4 btn btn-primary mt-1" type="submit" value="Suscribite">
     </div>
     </form>
   
@@ -156,6 +151,8 @@
     
   
     <script src="bootstrap/js/bootstrap.min.js" ></script>
-    
-  </body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
