@@ -1,8 +1,43 @@
-.row {
-  border: solid red 1px;
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-div {
-  border: solid black 1px;
+#menuPrincipal {
+  background-color: #ffffff;
+  border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
+}
+
+#menuPrincipal a, #menuPrincipal i {
+  color: #3b0e35;
+}
+
+#menuPrincipal a:hover, #menuPrincipal i:hover {
+  color: #a52894;
+}
+
+#menuPrincipal a {
+  font-size: 18px;
+}
+
+#menuPrincipal i {
+  font-size: 40px;
+  margin: 5px;
+}
+
+#menuNavegacion a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  -webkit-transition: background-size 1s;
+  transition: background-size 1s;
+}
+
+#menuNavegacion a:hover, #menuNavegacion a:focus {
+  background-size: 100% 1px;
 }
 /*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,40 @@
+#menuPrincipal {
+    background-color: #ffffff;
+    border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
+
+    a, i{
+    
+    color: rgb(59, 14, 53);
+}
+
+a:hover, i:hover {
+    color: rgb(165, 40, 148);
+}
+
+a{
+    font-size: 18px;
+    
+}
+
+
+i{
+  font-size: 40px;
+  margin: 5px;
+  
+}
+
+}
+
+#menuNavegacion{
+    a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 70%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size 1s;
+    }
+    a:hover, a:focus {
+        background-size: 100% 1px;
+    }
+}
