@@ -16,19 +16,23 @@
 
 
     <!--NAVBAR-->
+    <div class="container-fluid">
+      <div class="row">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-      <div class="container-fluid">
-
+    
+      <!--logo-->
+      <div class="col-4">
         <a id="logo" class="navbar-brand" href="#">Traume</a>
-
-
+      </div>
+      <!--menuDeNavegacion-->
+      <div class="col-4">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
 
 
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
           <ul class="navbar-nav ">
             <li class="nav-item">
               <a class="nav-link" href="#">Catalogo</a>
@@ -42,7 +46,18 @@
           </ul>
         </div>
       </div>
-    </nav>
+
+      <!--redesSociales-->
+      <div class="col-4 d-flex justify-content-end">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Whatsapp</a>
+      </div>
+    </div>
+  </nav>
+    </div>
+    </div>
+    
 
 
     <form id="formRegistrar" class="m-3 p-1 border border-dark" action="action_page.php" method="post">
@@ -102,57 +117,147 @@
   </button>
 </div>
 
-    <!--OFERTAS-->
+    <!--NOVEDADES-->
+<div class="" id="contenedorNovedades">
+
+<div class="" id="titulosNovedades">
+<h2 class="text-center">Novedades</h2>
+<h3 class="text-center">Nuevos productos</h3>
+</div>
+
+<div class="row justify-content-center" id="productosNovedades">
+
+  <div class="col-2">
+    IMAGEN1
+    <h4>Nombre del producto</h4>
+    <p>Precio</p>
+  </div>
+
+  <div class="col-2">IMAGEN2
+    <h4>Nombre del producto</h4>
+    <p>Precio</p>
+  </div>
+
+  <div class="col-2">
+    IMAGEN3
+    <h4>Nombre del producto</h4>
+    <p>Precio</p>
+  </div>
+
+  <div class="col-2">
+    IMAGEN4
+    <h4>Nombre del producto</h4>
+    <p>Precio</p>
+  </div>
+
+</div>
 
 
-<h2 class="text-center">Nuevos productos</h2>
-<h3 class="text-center">Las mejores ofertas</h3>
+
+</div>
 
 <div id="listaDeProductos"></div>
 
 
-
-
-
-    <!--CONTACTO-->
-<div id="formContacto" class="container border col-6">
-  <div class="row">
-    <form class="text-center" action="/action_page.php">
-      <label class="col-6 text-start" for="name">Nombre</label>
-      <input class="col-6" type="text" id="name" name="name">
-    
-      <label class="col-6 text-start" for="email">Correo electronico</label>
-      <input class="col-6" type="text" id="email" name="email">
-    
-      <label class="col-6 text-start" for="localidad">Localidad</label>
-      <select class="col-6" id="localidad" name="localidad">
-        <option value="tresDeFebrero">Tres de Febrero</option>
-        <option value="moron">Moron</option>
-        <option value="ituzaingo">Ituzaingo</option>
-      </select>
-    </form>
-  </div>
-    <div class="row d-flex justify-content-center">
-      <input id="inputSuscribite" class="col-4 btn btn-primary mt-1" type="submit" value="Suscribite">
-    </div>
-    </form>
   
-  </div>
     <!--FOOTER-->
+<div class="container-fluid" id="footer">
 
-    <div class="container-fluid p-0">
-      <div class="col-3 border bg-secondary">FOOTER</div>
 
-      <div class="col-3 border bg-secondary">FOOTER</div>
 
-      <div class="col-3 border bg-secondary">FOOTER</div>
+    <div class="row">
+      <div class="col-4 border bg-secondary">
+        <h2>Contactate</h2>
+        <nav class="navbar bg-light">
+
+          <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Instagram</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Facebook</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Whatsapp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Devolver Compra</a>
+              </li>
+            </ul>
+          </div>
+        
+        </nav>
+      </div>
+
+      <div class="col-4 border bg-secondary">
+        <h2>Suscribite a nuestras novedades!</h2>
+        <div id="formContacto" class="container border">
+          <div class="row">
+            <form class="text-center" action="/action_page.php">
+
+              <div class="row d-inline">
+              <label class="col-3 text-center" for="name">Nombre</label>
+              <input class="col-9" type="text" id="name" name="name">
+            </div>
+            
+            <div class="row d-inline">
+              <label class="col-3 text-center" for="email">Email</label>
+              <input class="col-9" type="text" id="email" name="email">
+            </div>
+
+
+            <div class="row d-inline">
+              <label class="col-3 text-center" for="localidad">Localidad</label>
+              <select class="col-9" id="localidad" name="localidad">
+                <option value="tresDeFebrero">Tres de Febrero</option>
+                <option value="moron">Moron</option>
+                <option value="ituzaingo">Ituzaingo</option>
+              </select>
+            </div>
+
+            </form>
+          </div>
+            <div class="row d-flex justify-content-center">
+              <input id="inputSuscribite" class="col-10 btn btn-primary mt-1" type="submit" value="Suscribite">
+            </div>
+            </form>
+          
+          </div>
+      </div>
+
+      <div class="col-4 border bg-secondary">
+        <h2>Nosotros</h2>
+        <nav class="navbar bg-light">
+
+          <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Traume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plazos de entrega</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Metodos de pago</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vende con nosotros</a>
+              </li>
+            </ul>
+          </div>
+        
+        </nav>
+      </div>
 
     </div>
-    
+  </div> 
   
     <script src="bootstrap/js/bootstrap.min.js" ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="js/main.js"></script>
+    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>-->
 </body>
 
 </html>

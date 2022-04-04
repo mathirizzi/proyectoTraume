@@ -1,4 +1,8 @@
-#barraNavegacion {
-  background-color: red;
+.row {
+  border: solid red 1px;
+}
+
+div {
+  border: solid black 1px;
 }
 /*# sourceMappingURL=estilos.css.map */
