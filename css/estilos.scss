@@ -17,6 +17,10 @@ body{
     background-color: $colorFondoPrincipal;
 }
 
+main{
+    padding-top: 80px;
+}
+
 @import "_header.scss";
 @import "_novedades.scss";
 @import "_footer.scss";

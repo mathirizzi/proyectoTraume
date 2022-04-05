@@ -8,6 +8,10 @@ body {
   background-color: #f7efe7;
 }
 
+main {
+  padding-top: 80px;
+}
+
 #contenedorLogo {
   text-align: end;
   margin-top: 11px;
@@ -26,6 +30,9 @@ body {
 #menuPrincipal {
   background-color: #f7efe7;
   border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
+  position: fixed;
+  z-index: 100;
+  height: 80px;
 }
 
 #menuNavegacion a, #menuNavegacion i, #menuRedesSociales a, #menuRedesSociales i {
