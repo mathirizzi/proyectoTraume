@@ -1,0 +1,85 @@
+#footer{
+    background-color: rgba(117, 74, 18, 0.404);
+    
+    h2{
+        font-size: 25px;
+        text-align: start;
+    }
+
+    .col-4{
+        border-left: solid rgba(126, 88, 71, 0.233) 1px;
+    }
+}
+
+#contactateFooter{
+    display: flex;
+    justify-content: center;
+
+   
+
+    a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+
+    span {
+        transition: transform 0.4s ease-out;
+    }
+
+    a span:first-child {
+        display: inline-block;
+        padding: 4px;
+    
+    }
+
+    a span:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        margin-right: 50px;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+    a:hover span:first-child {
+        transform: translateY(100%);
+    }
+
+    a:hover span:last-child, [data-animation] a:hover span:last-child {
+        transform: none;
+}
+
+[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
+  }
+  
+[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+  }
+  
+  [data-animation="to-right"] a span:last-child {
+    transform: translateX(-100%);
+  }
+  
+  [data-animation="to-right"] a:hover span:first-child {
+    transform: translateX(100%);
+  }
+  
+  [data-animation="to-left"] a span:last-child {
+    transform: translateX(100%);
+  }
+  
+  [data-animation="to-left"] a:hover span:first-child {
+    transform: translateX(-100%);
+  }
+
+}
