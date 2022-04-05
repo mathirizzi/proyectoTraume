@@ -1,9 +1,20 @@
 #footer{
     background-color: rgba(117, 74, 18, 0.404);
+    padding-top: 10px;
+    a{
+     padding: 0;
+      color: $colorLetraPrincipal;
+      
+    }
+
+    a:hover {
+      color: $colorLetraPrincipalHover;
+  }
     
     h2{
         font-size: 25px;
-        text-align: start;
+        font-style: oblique;
+        
     }
 
     .col-4{
@@ -12,11 +23,15 @@
 }
 
 #contactateFooter{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: end;
 
-   
-
+  h2{
+    
+    height: 30px;
+    transform: translate(125px);
+    
+  }
     a {
         position: relative;
         display: block;
@@ -82,4 +97,10 @@
     transform: translateX(-100%);
   }
 
+}
+
+#divSuscribite{
+  h2{
+    text-align: center;
+  }
 }

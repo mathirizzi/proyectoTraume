@@ -1,6 +1,14 @@
-$colorParaPrecios: rgb(175, 17, 104);
 
 #productosNovedades{
+
+    div{
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.336);
+        margin-bottom: 10px;
+    }
+
+    div:hover{
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.575);
+    }
 
     img{
         height: 80%;

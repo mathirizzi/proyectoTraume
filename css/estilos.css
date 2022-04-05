@@ -4,24 +4,43 @@
   padding: 0;
 }
 
-#menuPrincipal {
-  background-color: #ffffff;
-  border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
+body {
+  background-color: #f7efe7;
 }
 
-#menuPrincipal a, #menuPrincipal i {
+#contenedorLogo {
+  text-align: end;
+  margin-top: 11px;
+}
+
+#contenedorLogo a {
+  font-size: 80px;
   color: #3b0e35;
 }
 
-#menuPrincipal a:hover, #menuPrincipal i:hover {
+#contenedorLogo a:hover {
+  color: #a52894;
+  text-shadow: 1px 1px 2px black;
+}
+
+#menuPrincipal {
+  background-color: #f7efe7;
+  border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
+}
+
+#menuNavegacion a, #menuNavegacion i, #menuRedesSociales a, #menuRedesSociales i {
+  color: #3b0e35;
+}
+
+#menuNavegacion a:hover, #menuNavegacion i:hover, #menuRedesSociales a:hover, #menuRedesSociales i:hover {
   color: #a52894;
 }
 
-#menuPrincipal a {
+#menuNavegacion a, #menuRedesSociales a {
   font-size: 18px;
 }
 
-#menuPrincipal i {
+#menuNavegacion i, #menuRedesSociales i {
   font-size: 40px;
   margin: 5px;
 }
@@ -42,13 +61,25 @@
 }
 
 #imagenesCarousel {
-  background-color: yellow;
   height: 600px;
+  -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.068);
+          box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.068);
 }
 
 #imagenesCarousel img {
   width: 100%;
   height: 100%;
+}
+
+#productosNovedades div {
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.336);
+          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.336);
+  margin-bottom: 10px;
+}
+
+#productosNovedades div:hover {
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.575);
+          box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.575);
 }
 
 #productosNovedades img {
@@ -91,11 +122,21 @@
 
 #footer {
   background-color: rgba(117, 74, 18, 0.404);
+  padding-top: 10px;
+}
+
+#footer a {
+  padding: 0;
+  color: #3b0e35;
+}
+
+#footer a:hover {
+  color: #a52894;
 }
 
 #footer h2 {
   font-size: 25px;
-  text-align: start;
+  font-style: oblique;
 }
 
 #footer .col-4 {
@@ -106,9 +147,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+#contactateFooter h2 {
+  height: 30px;
+  -webkit-transform: translate(125px);
+          transform: translate(125px);
 }
 
 #contactateFooter a {
@@ -191,5 +238,9 @@
 #contactateFooter [data-animation="to-left"] a:hover span:first-child {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+}
+
+#divSuscribite h2 {
+  text-align: center;
 }
 /*# sourceMappingURL=estilos.css.map */

@@ -1,9 +1,20 @@
 
+$colorFondoPrincipal: rgb(247, 239, 231);
+$colorLetraPrincipal: rgb(59, 14, 53);
+$colorLetraPrincipalHover: rgb(165, 40, 148);
+$colorParaPrecios: rgb(175, 17, 104);
+
 
 *{
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
+    
+    
+}
+
+body{
+    background-color: $colorFondoPrincipal;
 }
 
 @import "_header.scss";

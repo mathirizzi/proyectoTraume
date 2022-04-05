@@ -1,31 +1,49 @@
-
-$colorLetraPrincipal: rgb(59, 14, 53);
+#contenedorLogo{
+    text-align: end;
+    margin-top: 11px;
+    a{
+        font-size: 80px;
+        color: $colorLetraPrincipal;
+    
+}
+a:hover{
+    color: $colorLetraPrincipalHover;
+    text-shadow: 1px 1px 2px black;
+}
+}
 
 #menuPrincipal {
-    background-color: #ffffff;
+    background-color: $colorFondoPrincipal;
     border-bottom: rgba(116, 113, 113, 0.247) solid 1px;
 
+   
+
+}
+
+
+#menuNavegacion, #menuRedesSociales{
+   
+
     a, i{
-    color: $colorLetraPrincipal;
+        color: $colorLetraPrincipal;
+        
+    }
     
-}
-
-a:hover, i:hover {
-    color: rgb(165, 40, 148);
-}
-
-a{
-    font-size: 18px;
+    a:hover, i:hover {
+        color: $colorLetraPrincipalHover;
+    }
     
-}
-
-
-i{
-  font-size: 40px;
-  margin: 5px;
-  
-}
-
+    a{
+        font-size: 18px;
+        
+    }
+    
+    
+    i{
+      font-size: 40px;
+      margin: 5px;
+      
+    }
 }
 
 #menuNavegacion{
@@ -42,10 +60,9 @@ i{
     }
 }
 
-
 #imagenesCarousel{
-    background-color: yellow;
     height: 600px;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.068);
 
     img{
         width: 100%;
