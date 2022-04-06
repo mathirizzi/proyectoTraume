@@ -100,20 +100,80 @@ swal({
   .then(productos => {
 productos.forEach((producto) => {
 listaDeProductos.innerHTML += `
-<div id="producto${producto.id}" class="card" style="width: 18rem;">
-<img src="./imgs/${producto.img}" class="card-img-top" alt="${producto.nombre}">
+
+
+  <div class="col-2">
+<div id="producto${producto.id}" class="card">
+<img src="./imgs/${producto.img}" class="card-img-top img-fluid" alt="${producto.nombre}">
 <div class="card-body">
 <h5 class="card-title">${producto.nombre}</h5>
 </div>
 <ul class="list-group list-group-flush">
-<li class="list-group-item">Precio: ${producto.precio}</li>
-<li class="list-group-item">Stock disponible: ${producto.stock}</li>
-<li class="list-group-item">Talle disponible: ${producto.talle}</li>
+<li class="list-group-item precio">Precio: ${producto.precio}</li>
+<li class="list-group-item stock">Stock disponible: ${producto.stock}</li>
+<li class="list-group-item talle">Talle disponible: ${producto.talle}</li>
 </ul>
-<button type="button" class="btn btn-success">Comprar</button>
+<button type="button" class="btn btn-success agregarCarrito" data-id="${producto.id}">Agregar al carrito</button>
+</div>
+
+
 </div>
 `
 })
   })
 
 
+listaDeProductos.addEventListener('click', e => {
+  addCarrito(e)
+})
+
+const addCarrito = e => {
+  //console.log(e.target)
+  //console.log(e.target.classList.contains('agregarCarrito'))
+  if (e.target.classList.contains('agregarCarrito')) {
+    
+    setCarrito(e.target.parentElement)
+  }
+
+e.stopPropagation()
+}
+
+const setCarrito = objeto => {
+console.log(objeto)
+const producto = {
+  id: objeto.querySelector('.agregarCarrito').dataset.id,
+  title: objeto.querySelector('h5').textContent,
+  precio: objeto.querySelector('.precio').textContent,
+  talle: objeto.querySelector('.talle').textContent,
+  cantidad: 1,
+}
+
+if(carrito.hasOwnProperty(producto.id)) {
+  producto.cantidad = carrito[producto.id].cantidad + 1
+}
+
+carrito[producto.id] = {...producto}
+pintarCarrito()
+}
+
+const pintarCarrito = () => {
+  itemsCarrito.innerHTML = ''
+  Object.values(carrito).forEach(producto => {
+    itemsCarrito.innerHTML += `
+              <tr>
+                <td>${producto.title}</td>
+                <td>
+                  ${producto.cantidad}
+                </td>
+                <td>
+                ${producto.talle}
+                </td>
+              </tr>
+    `
+  })
+
+}
+
+let carrito = {}
+
+let itemsCarrito = document.getElementById("itemsCarrito")

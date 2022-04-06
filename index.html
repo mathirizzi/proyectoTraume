@@ -1,101 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-    <!--CSS Propio-->
-    <link rel="stylesheet" href="css/estilos.css">
-    <!--FONTS-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--CSS Propio-->
+  <link rel="stylesheet" href="css/estilos.css">
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
 
 
-    <title>Traume</title>
-  </head>
-  <body>
+  <title>Traume</title>
+</head>
 
-<header>
+<body>
+
+  <header>
     <!--NAVBAR-->
     <div class="container-fluid">
       <div class="row">
-    <nav class="navbar navbar-expand-sm d-flex justify-content-center pb-3" id="menuPrincipal">
+        <nav class="navbar navbar-expand-sm d-flex justify-content-center pb-3" id="menuPrincipal">
 
-    
-      <!--logo-->
-      <div class="col-3" id="contenedorLogo">
-        <a id="logo" class="navbar-brand" href="#">träume</a>
+
+          <!--logo-->
+          <div class="col-3" id="contenedorLogo">
+            <a id="logo" class="navbar-brand" href="#">träume</a>
+          </div>
+          <!--menuDeNavegacion-->
+          <div class="col-6 mt-4" id="menuNavegacion">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tienda Online</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Donde comprar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Emprendedores</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--redesSociales-->
+          <div class="col-2 d-flex justify-content-center mt-4" id="menuRedesSociales">
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
       </div>
-      <!--menuDeNavegacion-->
-      <div class="col-6 mt-4" id="menuNavegacion">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-          <ul class="navbar-nav ">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Catalogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tienda Online</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Donde comprar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Emprendedores</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!--redesSociales-->
-      <div class="col-2 d-flex justify-content-center mt-4" id="menuRedesSociales">
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        
-      </div>
-    </div>
-  </nav>
+      </nav>
     </div>
     </div>
-    
+
   </header>
 
-<main class="">
+  <main class="">
 
     <form id="formRegistrar" class="m-3 p-1 border border-dark" action="action_page.php" method="post">
-    
+
       <div class="container">
         <label for="usuario"><b>Usuario</b></label>
         <input id="inputUsuario" type="text" placeholder="Ingresar Usuario" name="usuario" required>
-    
+
         <label for="correo"><b>Correo Electronico</b></label>
         <input id="inputCorreo" type="text" placeholder="Ingresar Correo" name="correo" required>
 
         <label for="contraseña"><b>Contraseña</b></label>
         <input id="inputContraseña" type="password" placeholder="Ingresar Contraseña" name="contraseña" required>
-    
+
         <button id="inputRegistrate" type="submit">Registrarse</button>
       </div>
-    
-      
+
+
     </form>
 
     <div id="usuariosRegistrados" class="container">
@@ -105,96 +107,151 @@
 
     <!--CARROUSEL-->
 
-<!-- Carousel -->
-<div class="container-fluid p-5">
-  <div class="row">
-    <div class="col-12">
+    <!-- Carousel -->
+    <div class="container-fluid p-5">
+      <div class="row">
+        <div class="col-12">
 
 
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
 
-  <!-- The slideshow/carousel -->
-  <div id="imagenesCarousel" class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="imgs/banner01.jpg" alt="Los Angeles" class="img-fluid">
+            <!-- The slideshow/carousel -->
+            <div id="imagenesCarousel" class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="imgs/banner01.jpg" alt="Los Angeles" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="imgs/banner02.jpg" alt="Chicago" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="imgs/banner03.jpg" alt="New York" class="img-fluid">
+              </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="imgs/banner02.jpg" alt="Chicago" class="img-fluid">
+
+    <!--Carrito-->
+
+    <!-- Nav pills -->
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#productos">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#carrito">Carrito</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane container active" id="home">home</div>
+
+      <div class="tab-pane container fade" id="productos">
+        <div class="d-flex justify-content-around" id="listaDeProductos"></div>
+      </div>
+
+      <div class="tab-pane container fade" id="carrito">
+        <div class="container mt-3">
+          <h2>Productos agregados al carrito</h2>
+          
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Talle</th>
+                <th>Precio total</th>
+              </tr>
+            </thead>
+            <tbody id="itemsCarrito">
+              
+              
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-6">
+            <p>Total de la compra</p>
+          </div>
+            <div class="col-6">
+            <button type="button" class="btn btn-success">Confirmar compra</button>
+          </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="imgs/banner03.jpg" alt="New York" class="img-fluid">
-    </div>
-  </div>
 
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-
-</div>
-
-</div>
-</div>
 
     <!--NOVEDADES-->
-<div class="container-fluid" id="contenedorNovedades">
+    <div class="container-fluid" id="contenedorNovedades">
 
-<div class="" id="titulosNovedades">
-<h2 class="text-center m-0">Novedades</h2>
-<h3 class="text-center">Nuevos productos</h3>
-</div>
+      <div class="" id="titulosNovedades">
+        <h2 class="text-center m-0">Novedades</h2>
+        <h3 class="text-center">Nuevos productos</h3>
+      </div>
 
-<div class="row justify-content-around" id="productosNovedades">
+      <div class="row justify-content-around" id="productosNovedades">
 
-  <div class="col-2">
-    <img class="img-fluid" src="/imgs/oferta01.jpg" alt="">
-    <h4>Nombre del producto</h4>
-    <p>$5555</p>
-  </div>
+        <div class="col-2">
+          <img class="img-fluid" src="/imgs/oferta01.jpg" alt="">
+          <h4>Nombre del producto</h4>
+          <p>$5555</p>
+        </div>
 
-  <div class="col-2">
-    <img class="img-fluid" src="/imgs/oferta02.jpg" alt="">
-    <h4>Nombre del producto</h4>
-    <p>$5555</p>
-  </div>
+        <div class="col-2">
+          <img class="img-fluid" src="/imgs/oferta02.jpg" alt="">
+          <h4>Nombre del producto</h4>
+          <p>$5555</p>
+        </div>
 
-  <div class="col-2">
-    <img class="img-fluid" src="/imgs/oferta03.jpg" alt="">
-    <h4>Nombre del producto</h4>
-    <p>$5555</p>
-  </div>
+        <div class="col-2">
+          <img class="img-fluid" src="/imgs/oferta03.jpg" alt="">
+          <h4>Nombre del producto</h4>
+          <p>$5555</p>
+        </div>
 
-  <div class="col-2">
-    <img class="img-fluid" src="/imgs/oferta04.jpg" alt="">
-    <h4>Nombre del producto</h4>
-    <p>$5555</p>
-  </div>
+        <div class="col-2">
+          <img class="img-fluid" src="/imgs/oferta04.jpg" alt="">
+          <h4>Nombre del producto</h4>
+          <p>$5555</p>
+        </div>
 
-</div>
-
-
-
-</div>
-
-<div id="listaDeProductos"></div>
+      </div>
 
 
-</main>
 
-  
-    <!--FOOTER-->
-<div class="container-fluid" id="footer">
+    </div>
+
+   
+
+
+  </main>
+
+
+  <!--FOOTER-->
+  <div class="container-fluid" id="footer">
 
 
 
@@ -226,7 +283,7 @@
               </li>
             </ul>
           </div>
-        
+
         </nav>
       </div>
 
@@ -237,33 +294,33 @@
             <form class="text-center" action="/action_page.php">
 
               <div class="row d-inline">
-              <label class="col-3 text-center" for="name">Nombre</label>
-              <input class="col-9" type="text" id="name" name="name">
-            </div>
-            
-            <div class="row d-inline">
-              <label class="col-3 text-center" for="email">Email</label>
-              <input class="col-9" type="text" id="email" name="email">
-            </div>
+                <label class="col-3 text-center" for="name">Nombre</label>
+                <input class="col-9" type="text" id="name" name="name">
+              </div>
+
+              <div class="row d-inline">
+                <label class="col-3 text-center" for="email">Email</label>
+                <input class="col-9" type="text" id="email" name="email">
+              </div>
 
 
-            <div class="row d-inline">
-              <label class="col-3 text-center" for="localidad">Localidad</label>
-              <select class="col-9" id="localidad" name="localidad">
-                <option value="tresDeFebrero">Tres de Febrero</option>
-                <option value="moron">Moron</option>
-                <option value="ituzaingo">Ituzaingo</option>
-              </select>
-            </div>
+              <div class="row d-inline">
+                <label class="col-3 text-center" for="localidad">Localidad</label>
+                <select class="col-9" id="localidad" name="localidad">
+                  <option value="tresDeFebrero">Tres de Febrero</option>
+                  <option value="moron">Moron</option>
+                  <option value="ituzaingo">Ituzaingo</option>
+                </select>
+              </div>
 
             </form>
           </div>
-            <div class="row d-flex justify-content-center">
-              <input id="inputSuscribite" class="col-10 btn btn-primary mt-1" type="submit" value="Suscribite">
-            </div>
-            </form>
-          
+          <div class="row d-flex justify-content-center">
+            <input id="inputSuscribite" class="col-10 btn btn-primary mt-1" type="submit" value="Suscribite">
           </div>
+          </form>
+
+        </div>
       </div>
 
       <div class="col-4">
@@ -287,17 +344,17 @@
               </li>
             </ul>
           </div>
-        
+
         </nav>
       </div>
 
     </div>
-  </div> 
+  </div>
   <script src="https://kit.fontawesome.com/71dc256463.js" crossorigin="anonymous"></script>
-    <script src="bootstrap/js/bootstrap.min.js" ></script>
-    <script src="js/estilos.js"></script>
-    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="js/main.js"></script>-->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

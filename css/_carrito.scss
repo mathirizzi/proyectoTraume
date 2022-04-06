@@ -1,0 +1,20 @@
+#listaDeProductos{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    .card{
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.336);
+        margin-bottom: 10px;
+    }
+    .card:hover{
+        box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.575);
+    }
+    img{
+        height: 400px;
+    }
+
+ 
+
+    
+}
