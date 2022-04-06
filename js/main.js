@@ -95,7 +95,7 @@ swal({
   });
 
   let listaDeProductos = document.getElementById("listaDeProductos")
-  fetch("./json/productos.json")
+  fetch("json/productos.json")
   .then(response => response.json())
   .then(productos => {
 productos.forEach((producto) => {
@@ -104,7 +104,7 @@ listaDeProductos.innerHTML += `
 
   <div class="col-2">
 <div id="producto${producto.id}" class="card">
-<img src="./imgs/${producto.img}" class="card-img-top img-fluid" alt="${producto.nombre}">
+<img src="imgs/${producto.img}" class="card-img-top img-fluid" alt="${producto.nombre}">
 <div class="card-body">
 <h5 class="card-title">${producto.nombre}</h5>
 </div>
@@ -128,8 +128,6 @@ listaDeProductos.addEventListener('click', e => {
 })
 
 const addCarrito = e => {
-  //console.log(e.target)
-  //console.log(e.target.classList.contains('agregarCarrito'))
   if (e.target.classList.contains('agregarCarrito')) {
     
     setCarrito(e.target.parentElement)
