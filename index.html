@@ -154,10 +154,7 @@
     <!-- Nav pills -->
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link active" data-bs-toggle="pill" href="#home">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#productos">Productos</a>
+        <a class="nav-link active" data-bs-toggle="pill" href="#productos">Productos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="pill" href="#carrito">Carrito</a>
@@ -166,9 +163,8 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div class="tab-pane container active" id="home">home</div>
 
-      <div class="tab-pane container fade" id="productos">
+      <div class="tab-pane container active" id="productos">
         <div class="d-flex justify-content-around" id="listaDeProductos"></div>
       </div>
 
@@ -181,8 +177,9 @@
               <tr>
                 <th>Producto</th>
                 <th>Cantidad</th>
-                <th>Talle</th>
-                <th>Precio total</th>
+                <th>Accion</th>
+                <th>Precio</th>
+                <th>Total</th>
               </tr>
             </thead>
             <tbody id="itemsCarrito">
@@ -190,14 +187,25 @@
               
             </tbody>
           </table>
+          <div class="container d-inline">
           <div class="row">
-            <div class="col-6">
-            <p>Total de la compra</p>
+            <div class="col-2">
+            <th>Total de productos</th>
           </div>
-            <div class="col-6">
+          <div class="col-4" id="footerTotalProductos">
+            <th>Carrito vacio, puede comenzar a comprar</th>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-danger" id="vaciarCarrito">Vaciar carrito</button>
+          </div>
+          <div class="col-2" id="footerPrecioTotal">
+            <th>Total</th>
+          </div>
+            <div class="col-2">
             <button type="button" class="btn btn-success">Confirmar compra</button>
           </div>
           </div>
+        </div>
 
         </div>
       </div>

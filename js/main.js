@@ -109,7 +109,7 @@ listaDeProductos.innerHTML += `
 <h5 class="card-title">${producto.nombre}</h5>
 </div>
 <ul class="list-group list-group-flush">
-<li class="list-group-item precio">Precio: ${producto.precio}</li>
+<li class="list-group-item precio"> ${producto.precio}</li>
 <li class="list-group-item stock">Stock disponible: ${producto.stock}</li>
 <li class="list-group-item talle">Talle disponible: ${producto.talle}</li>
 </ul>
@@ -156,9 +156,12 @@ carrito[producto.id] = {...producto}
 pintarCarrito()
 }
 
+
+
 const pintarCarrito = () => {
   itemsCarrito.innerHTML = ''
   Object.values(carrito).forEach(producto => {
+    let total = producto.cantidad * producto.precio
     itemsCarrito.innerHTML += `
               <tr>
                 <td>${producto.title}</td>
@@ -166,14 +169,92 @@ const pintarCarrito = () => {
                   ${producto.cantidad}
                 </td>
                 <td>
-                ${producto.talle}
+                <button class="btn btn-info btnAumentar" data-id="${producto.id}">
+                 + 
+                 </button>
+                 <button class="btn btn-danger btnDisminuir" data-id="${producto.id}">
+                 -
+                 </button>
+                </td>
+                <td>
+                ${producto.precio}
+                </td>
+                <td>
+                ${total}
                 </td>
               </tr>
     `
   })
+
+  pintarFooter()
+
+  localStorage.setItem('carrito', JSON.stringify(carrito))
+
+}
+
+const pintarFooter = () => {
+  footerTotalProductos.innerHTML = ''
+  footerPrecioTotal.innerHTML = ''
+if(Object.keys(carrito).length === 0) {
+  footerTotalProductos.innerHTML = `
+  <th>Carrito vacio, puede comenzar a comprar</th>
+  `
+  return
+}
+
+const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad,0)
+const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
+
+footerTotalProductos.innerHTML = `
+${nCantidad}
+`
+footerPrecioTotal.innerHTML = `
+Total: ${nPrecio}
+`
+const vaciarCarrito = document.getElementById("vaciarCarrito")
+vaciarCarrito.addEventListener('click', () => {
+  carrito = {}
+  pintarCarrito()
+})
+
 
 }
 
 let carrito = {}
 
 let itemsCarrito = document.getElementById("itemsCarrito")
+let footerTotalProductos = document.getElementById("footerTotalProductos")
+let footerPrecioTotal = document.getElementById("footerPrecioTotal")
+
+itemsCarrito.addEventListener('click', e => {
+  btnAccion(e)
+})
+
+
+const btnAccion = e => {
+  
+  if(e.target.classList.contains('btnAumentar')){
+    const producto = carrito[e.target.dataset.id]
+    producto.cantidad++
+    carrito[e.target.dataset.id] = {...producto}
+    pintarCarrito()
+  }
+
+  if(e.target.classList.contains('btnDisminuir')){
+    const producto = carrito[e.target.dataset.id]
+   producto.cantidad--
+    if(producto.cantidad === 0) {
+      delete carrito[e.target.dataset.id]
+    }
+    pintarCarrito()
+  
+}
+
+e.stopPropagation()
+
+}
+
+if(localStorage.getItem('carrito')) {
+  carrito = JSON.parse(localStorage.getItem('carrito'))
+  pintarCarrito()
+}
